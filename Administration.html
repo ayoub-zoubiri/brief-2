@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Administration</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto px-20 py-3"
+    >
+      <!-- logo -->
+      <div class="">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- menu -->
+      <div class="w pl-40 space-x-4">
+        <a
+          href="index.html"
+          class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Dashboard</a
+        >
+        <a
+          href="mes_conges.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Mes congés</a
+        >
+        <a
+          href="Demande_de_conge.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Demande de congé</a
+        >
+        <a
+          href="#"
+          aria-current="page"
+          class="rounded-md px-3 py-2 text-sm font-bold text-teal-600"
+          >Administration</a
+        >
+      </div>
+      <!-- notification & profile -->
+      <div class="">
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="w-[1240px] mx-auto mt-10 px-10">
+      <!-- Header Section -->
+      <div class="flex-row items-center justify-between pb-5 rounded-md">
+        <h1 class="text-black text-3xl font-normal">Gestion des congés</h1>
+        <div class="text-black text-base font-normal">
+          Gérez toutes les demandes de congés des employés
+        </div>
+      </div>
+      
+      <!-- Statistics Section -->
+      <div class="grid grid-cols-5 gap-4 mt-5">
+        <div class="bg-[#d3d2d8] rounded-md p-4 text-center">
+          <div class="flex items-center justify-center space-x-2">
+            <span class="text-2xl font-semibold">12</span>
+            <span class="text-gray-600">En attente</span>
+          </div>
+        </div>
+        <div class="bg-[#d3d2d8] rounded-md p-4 text-center">
+          <div class="flex items-center justify-center space-x-2">
+            <span class="text-2xl font-semibold">45</span>
+            <span class="text-gray-600">Approuvées</span>
+          </div>
+        </div>
+        <div class="bg-[#d3d2d8] rounded-md p-4 text-center">
+          <div class="flex items-center justify-center space-x-2">
+            <span class="text-2xl font-semibold">3</span>
+            <span class="text-gray-600">Refusées</span>
+          </div>
+        </div>
+        <div class="bg-[#d3d2d8] rounded-md p-4 text-center">
+          <div class="flex items-center justify-center space-x-2">
+            <span class="text-2xl font-semibold">60</span>
+            <span class="text-gray-600">Total ce mois</span>
+          </div>
+        </div>
+        <div class="bg-[#d3d2d8] rounded-md p-4 text-center">
+          <button class="bg-teal-600 text-white rounded-full px-4 py-2 hover:bg-teal-700">
+            <i class="fa-solid fa-filter"></i> Filtrer
+          </button>
+        </div>
+      </div>
+
+      <!-- Requests List Section -->
+      <div class="bg-[#d3d2d8] rounded-md p-8 mt-10">
+        <div class="flex justify-between items-center mb-4">
+          <h2 class="text-black text-xl font-semibold">Demandes de congés</h2>
+          <div class="flex space-x-2">
+            <select class="bg-white p-2 rounded-md">
+              <option>Tous les statuts</option>
+            </select>
+            <input type="text" placeholder="Rechercher un employé..." class="bg-white p-2 rounded-md px-3 py-2">
+          </div>
+        </div>
+        
+        <!-- Request Cards Grid -->
+        <div class="grid grid-cols-2 gap-4">
+          <!-- Card 1 -->
+          <div class="bg-white rounded-md p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-2">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-circle-user text-2xl"></i>
+                <div>
+                  <div class="font-medium">Marie Dubois</div>
+                  <div class="text-sm text-gray-600">Développeuse</div>
+                </div>
+              </div>
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">En attente</span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-700 mb-4">
+              <div>
+                <div>Type: Congé payés</div>
+                <div>Du: 15 Jan 2025</div>
+                <div>Au: 22 Jan 2025</div>
+                <div>Durée: 5 jours</div>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600">
+                <i class="fa-solid fa-check-circle mr-2"></i>Approuver
+              </button>
+              <button class="flex-1 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                <i class="fa-solid fa-times-circle mr-2"></i>Refuser
+              </button>
+            </div>
+          </div>
+
+          <!-- Card 2 -->
+          <div class="bg-white rounded-md p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-2">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-circle-user text-2xl"></i>
+                <div>
+                  <div class="font-medium">Pierre Martin</div>
+                  <div class="text-sm text-gray-600">Designer</div>
+                </div>
+              </div>
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">En attente</span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-700 mb-4">
+              <div>
+                <div>Type: Congé maladie</div>
+                <div>Du: 20 Jan 2025</div>
+                <div>Au: 21 Jan 2025</div>
+                <div>Durée: 2 jours</div>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600">
+                <i class="fa-solid fa-check-circle mr-2"></i>Approuver
+              </button>
+              <button class="flex-1 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                <i class="fa-solid fa-times-circle mr-2"></i>Refuser
+              </button>
+            </div>
+          </div>
+          
+          <!-- Card 3 -->
+          <div class="bg-white rounded-md p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-2">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-circle-user text-2xl"></i>
+                <div>
+                  <div class="font-medium">Sophie Laurent</div>
+                  <div class="text-sm text-gray-600">Chef de projet</div>
+                </div>
+              </div>
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-green-100 text-green-800">Approuvé</span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-700 mb-4">
+              <div>
+                <div>Type: Congé payés</div>
+                <div>Du: 25 Jan 2025</div>
+                <div>Au: 05 Fev 2025</div>
+                <div>Durée: 8 jours</div>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600">
+                <i class="fa-solid fa-check-circle mr-2"></i>Approuvé
+              </button>
+              <button class="flex-1 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                <i class="fa-solid fa-times-circle mr-2"></i>Refuser
+              </button>
+            </div>
+          </div>
+          
+          <!-- Card 4 -->
+          <div class="bg-white rounded-md p-4 shadow-sm">
+            <div class="flex justify-between items-center mb-2">
+              <div class="flex items-center space-x-2">
+                <i class="fa-solid fa-circle-user text-2xl"></i>
+                <div>
+                  <div class="font-medium">Thomas Petit</div>
+                  <div class="text-sm text-gray-600">Analyste</div>
+                </div>
+              </div>
+              <span class="px-2 py-1 text-xs font-semibold rounded-full bg-yellow-100 text-yellow-800">En attente</span>
+            </div>
+            <div class="flex justify-between text-sm text-gray-700 mb-4">
+              <div>
+                <div>Type: RTT</div>
+                <div>Du: 28 Jan 2025</div>
+                <div>Au: 28 Jan 2025</div>
+                <div>Durée: 1 jour</div>
+              </div>
+            </div>
+            <div class="flex space-x-2">
+              <button class="flex-1 px-4 py-2 bg-green-500 text-white rounded-full hover:bg-green-600">
+                <i class="fa-solid fa-check-circle mr-2"></i>Approuver
+              </button>
+              <button class="flex-1 px-4 py-2 bg-red-500 text-white rounded-full hover:bg-red-600">
+                <i class="fa-solid fa-times-circle mr-2"></i>Refuser
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <div class="flex justify-between items-center mt-6">
+          <div class="text-sm text-gray-600">
+            Affichage de 1 à 4 sur 60 demandes
+          </div>
+          <div class="flex space-x-2">
+            <button class="rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-200">Précédent</button>
+            <button class="rounded-full px-3 py-1 text-sm bg-teal-600 text-white">1</button>
+            <button class="rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-200">2</button>
+            <button class="rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-200">3</button>
+            <button class="rounded-full px-3 py-1 text-sm text-gray-600 hover:bg-gray-200">Suivant</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto py-20 mt-20 px-20"
+    >
+      <!-- logo -->
+      <div class="flex-grow">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- @ -->
+      <div class="text-white flex-grow text-center">
+        @Lorem, ipsum dolor 2025 .
+      </div>
+      <!-- menu -->
+      <div class="flex-row items-c justify-between pl-40 space-x-4 flex-grow text-right">
+        <div>
+          <a
+            href="#"
+            class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Dashboard</a
+          >
+        </div>
+        <div>
+          <a
+            href="#"
+            class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Mes congés</a
+          >
+        </div>
+        <div>
+          <a
+            href="#"
+            class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Demande de congé</a
+          >
+        </div>
+        <div>
+          <a
+            href="#"
+            aria-current="page"
+            class="rounded-md px-3 py-2 text-sm font-bold text-teal-600"
+            >Administration</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/administration.js"></script>
+  </body>
+</html>

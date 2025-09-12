@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Dash</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto px-20 py-3"
+    >
+      <!-- logo -->
+      <div class="">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- menu -->
+      <div class="w pl-40 space-x-4">
+        <a
+          href="#"
+          aria-current="page"
+          class="px-3 py-2 text-sm font-bold text-teal-600"
+          >Dashboard</a
+        >
+        <a
+          href="mes_conges.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Mes congés</a
+        >
+        <a
+          href="Demande_de_conge.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Demande de congé</a
+        >
+        <a
+          href="Administration.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Administration</a
+        >
+      </div>
+      <!-- notification & profile -->
+      <div class="">
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-bell"></i>
+        </button>
+
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- section 0 -->
+    <div
+      class="w-[1240px] flex-row items-center justify-between pb-5 rounded-[20px] mx-auto mt-10 px-10"
+    >
+      <h1 class="text-black text-3xl font-normal">Tableau de bord</h1>
+      <div class="text-black text-base font-normal">
+        Bienvenue, gérez vos congés et suivez vos demandes
+      </div>
+    </div>
+
+    <!-- section 1 -->
+    <div class="w-[1240px] px-10 mb-10 mx-auto">
+      <div class="w-full px-10 pb-5 bg-[#d3d2d8] rounded-[20px] mr-10">
+        <div class="flex justify-between items-center py-4">
+          <h1 class="justify-start text-black text-xl font-semibold">
+            Notifications importantes
+          </h1>
+          <div class="flex space-x-2">
+            <button id="btn-n1" class="text-black hover:text-white hover:bg-amber-800 hover:rounded-full w-7 h-7"><i class="fas fa-chevron-left"></i></button>
+            <button id="btn-n2" class="text-black hover:text-white hover:bg-amber-800 hover:rounded-full w-7 h-7"><i class="fas fa-chevron-right"></i></button>
+          </div>
+        </div>
+        <div id="notifications-container" class="w-auto pb-5 bg-white rounded-[20px] py-5 flex items-start space-x-4">
+          <!-- Notifications will be loaded here dynamically -->
+        </div>
+      </div>
+    </div>
+    
+    <!-- section 2 -->
+    <div
+      class="w-[1240px] flex items-center justify-between my-5 px-10 mx-auto"
+    >
+      <!-- c 1 -->
+      <div
+        class="w-90 h-48 bg-[#d3d2d8] rounded-[20px] flex flex-col justify-between px-8 py-6"
+      >
+        <div class="flex justify-between items-center">
+          <div class="text-black text-xl font-semibold">Solde de congés</div>
+          <div class="text-black text-base font-normal">
+            <i class="fa-solid fa-calendar-days"></i>
+          </div>
+        </div>
+        <div id="balance-container">
+          <!-- Leave balances will be loaded here dynamically -->
+        </div>
+      </div>
+
+      <!-- c 2 -->
+      <div
+        class="w-90 h-48 bg-[#d3d2d8] rounded-[20px] flex flex-col justify-between px-8 py-6"
+      >
+        <div class="flex justify-between items-center">
+          <div class="text-black text-xl font-semibold">Demandes en cours</div>
+          <div class="text-black text-base font-normal">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+        </div>
+        <div id="requests-summary">
+          <!-- Request summaries will be loaded here dynamically -->
+        </div>
+      </div>
+
+      <!-- c 3 -->
+      <div
+        class="w-90 h-48 bg-[#d3d2d8] rounded-[20px] flex flex-col justify-between px-8 py-6"
+      >
+        <div class="flex justify-between items-center">
+          <div class="text-black text-xl font-semibold">Prochains congés</div>
+          <div class="text-black text-base font-normal">
+            <i class="fa-solid fa-plane"></i>
+          </div>
+        </div>
+        <div id="upcoming-leaves-container">
+          <!-- Upcoming leaves will be loaded here dynamically -->
+        </div>
+      </div>
+    </div>
+
+    <!-- section 3 -->
+    <div class="w-[1240px] px-10 mx-auto mt-10">
+      <div class="bg-[#d3d2d8] rounded-[20px] flex-col py-5 px-10">
+        <div class="pt-2 justify-start text-black text-xl font-semibold">
+          Actions rapides
+        </div>
+        <div class="flex mx-auto items-center justify-between my-5">
+          <!-- c 1 -->
+          <a href="Demande_de_conge.html"
+            class="w-60 px-5 py-2 bg-[#E9ECEF] rounded-[10px] flex flex-col justify-center items-center gap-2"
+          >
+            <div class="text-black text-2xl font-normal">
+              <i class="fa-solid fa-plus"></i>
+            </div>
+            <div class="text-black text-base font-semibold">Nouvelle demande</div>
+          </a>
+
+          <!-- c 2 -->
+          <a href="mes_conges.html"
+            class="w-60 px-5 py-2 bg-[#E9ECEF] rounded-[10px] flex flex-col justify-center items-center gap-2"
+          >
+            <div class="text-black text-2xl font-normal">
+              <i class="fa-solid fa-list"></i>
+            </div>
+            <div class="text-black text-base font-semibold">Mes congés</div>
+          </a>
+          <!-- c 3 -->
+          <div
+            class="w-60 px-5 py-2 bg-[#E9ECEF] rounded-[10px] flex flex-col justify-center items-center gap-2"
+          >
+            <div class="text-black text-2xl font-normal">
+              <i class="fa-solid fa-chart-line"></i>
+            </div>
+            <div class="text-black text-base font-semibold">Statistiques</div>
+          </div>
+          <!-- c 4 -->
+          <div
+            class="w-60 px-5 py-2 bg-[#E9ECEF] rounded-[10px] flex flex-col justify-center items-center gap-2"
+          >
+            <div class="text-black text-2xl font-normal">
+              <i class="fa-solid fa-gear"></i>
+            </div>
+            <div class="text-black text-base font-semibold">Paramètres</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer -->
+    <footer
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto py-20 mt-20 px-50"
+    >
+      <!-- logo -->
+      <div class="px-10">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- @ -->
+      <div class="text-white">@Lorem, ipsum dolor 2025 .</div>
+
+      <!-- menu -->
+      <div class="flex-col items-c justify-between pr-40 space-y-2">
+        <div>
+          <a
+            href="#"
+            aria-current="page"
+            class="px-3 py-2 text-sm font-bold text-teal-600"
+            >Dashboard</a
+          >
+        </div>
+        <div>
+          <a
+            href="mes_conges.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Mes congés</a
+          >
+        </div>
+        <div>
+          <a
+            href="Demande_de_conge.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Demande de congé</a
+          >
+        </div>
+        <div>
+          <a
+            href="Administration.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Administration</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/dashboard.js"></script>
+  </body>
+</html>

@@ -1,0 +1,222 @@
+{
+  "users": [
+    {
+      "id": "1",
+      "name": "Ayoub ",
+      "role": "employee",
+      "email": "ayoub@flexidays.com",
+      "vacationBalance": {
+        "paidTimeOff": 2,
+        "rtt": 8,
+        "sickLeave": 0
+      }
+    },
+    {
+      "id": "2",
+      "name": "moad",
+      "role": "manager",
+      "email": "moad@flexidays.com",
+      "vacationBalance": {
+        "paidTimeOff": 20,
+        "rtt": 5,
+        "sickLeave": 0
+      }
+    },
+    {
+      "id": "3",
+      "name": "hamza",
+      "role": "hr",
+      "email": "hamza@flexidays.com",
+      "vacationBalance": {
+        "paidTimeOff": 30,
+        "rtt": 10,
+        "sickLeave": 0
+      }
+    }
+  ],
+  "leaveRequests": [
+    {
+      "id": "87b6",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-13",
+      "endDate": "2025-09-14",
+      "duration": "2 jours",
+      "type": "RTT",
+      "status": "approved",
+      "justification": "assas",
+      "approvedBy": "Manager",
+      "approvedDate": "2025-09-11T13:44:14.333Z"
+    },
+    {
+      "id": "4aed",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-21",
+      "endDate": "2025-09-22",
+      "duration": "2 jours",
+      "type": "Congés payés",
+      "status": "rejected",
+      "justification": "dzvxfv",
+      "rejectedBy": "Manager",
+      "rejectionReason": "Aucun motif spécifié",
+      "rejectedDate": "2025-09-11T13:45:12.356Z"
+    },
+    {
+      "id": "71d5",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-27",
+      "endDate": "2025-10-08",
+      "duration": "12 jours",
+      "type": "Congés maladie",
+      "status": "approved",
+      "justification": "fxcv ",
+      "approvedBy": "Manager",
+      "approvedDate": "2025-09-11T13:44:45.391Z"
+    },
+    {
+      "id": "d41b",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-20",
+      "duration": "1 jour",
+      "type": "Congés payés",
+      "status": "approved",
+      "justification": "dgbv';vcl",
+      "approvedBy": "Manager",
+      "approvedDate": "2025-09-11T15:16:32.504Z"
+    },
+    {
+      "id": "b175",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-25",
+      "endDate": "2025-09-28",
+      "duration": "4 jours",
+      "type": "Congés payés",
+      "status": "rejected",
+      "justification": "fhnbvvnv ",
+      "rejectedBy": "Manager",
+      "rejectionReason": "sdfsdsdsdf dfgfg",
+      "rejectedDate": "2025-09-11T22:41:21.215Z"
+    },
+    {
+      "id": "71d8",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-13",
+      "endDate": "2025-09-14",
+      "duration": "2 jours",
+      "type": "Congés payés",
+      "status": "approved",
+      "justification": "vcccc",
+      "approvedBy": "Manager"
+    },
+    {
+      "id": "81fe",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-21",
+      "endDate": "2025-09-27",
+      "duration": "7 jours",
+      "type": "Congés maladie",
+      "status": "rejected",
+      "justification": "dgvxb ",
+      "rejectedBy": "Manager",
+      "rejectionReason": ""
+    },
+    {
+      "id": "7c7b",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-25",
+      "duration": "6 jours",
+      "type": "Congés payés",
+      "status": "approved",
+      "justification": "dzxc",
+      "approvedBy": "Manager"
+    },
+    {
+      "id": "48cd",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-13",
+      "endDate": "2025-09-19",
+      "duration": "7 jours",
+      "type": "Congés payés",
+      "status": "approved",
+      "justification": "cvb",
+      "approvedBy": "Manager"
+    },
+    {
+      "id": "a68c",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-19",
+      "endDate": "2025-09-20",
+      "duration": "2 jours",
+      "type": "RTT",
+      "status": "rejected",
+      "justification": "xcv",
+      "rejectedBy": "Manager",
+      "rejectionReason": ""
+    },
+    {
+      "id": "3469",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-13",
+      "endDate": "2025-11-27",
+      "duration": "76 jours",
+      "type": "Congés maladie",
+      "status": "approved",
+      "justification": "xvbxcbxcv",
+      "approvedBy": "Manager"
+    },
+    {
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-26",
+      "endDate": "2025-10-01",
+      "duration": "6 jours",
+      "type": "RTT",
+      "status": "pending",
+      "justification": "zcv ",
+      "id": "452a"
+    },
+    {
+      "id": "e865",
+      "userId": 1,
+      "employeeName": "Ayoub ",
+      "startDate": "2025-09-20",
+      "endDate": "2025-09-25",
+      "duration": "6 jours",
+      "type": "Congés payés",
+      "status": "pending",
+      "justification": "jp;opo"
+    }
+  ],
+  "Notifications": [
+    {
+      "id": "1",
+      "title": "Fermeture exceptionnelle",
+      "message": "Les bureaux seront fermés le 15 mars 2025 pour maintenance. Planifiez vos congés en conséquence.",
+      "date": "2025-03-15"
+    },
+    {
+      "id": "2",
+      "title": " exceptionnelle",
+      "message": "Les bureaux seront fermés le 15 mars 2025 pour maintenance. Planifiez vos congés en conséquence.",
+      "date": "2025-03-15"
+    },
+    {
+      "id": "3",
+      "title": "Fermeture exceptionnelle",
+      "message": "Les bureaux seront fermés le 15 mars 2025 pour maintenance. Planifiez vos congés en conséquence.",
+      "date": "2025-03-15"
+    }
+  ]
+}

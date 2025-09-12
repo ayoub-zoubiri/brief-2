@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    />
+    <title>Mes congés</title>
+  </head>
+  <body>
+    <!-- Nav Bar -->
+    <nav
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto px-20 py-3"
+    >
+      <!-- logo -->
+      <div class="">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- menu -->
+      <div class="w pl-40 space-x-4">
+        <a
+          href="index.html"
+          class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Dashboard</a
+        >
+        <a
+          href="#"
+          aria-current="page"
+          class="rounded-md px-3 py-2 text-sm font-bold text-teal-600"
+          >Mes congés</a
+        >
+        <a
+          href="Demande_de_conge.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Demande de congé</a
+        >
+        <a
+          href="Administration.html"
+          class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+          >Administration</a
+        >
+      </div>
+      <!-- notification & profile -->
+      <div class="">
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-bell"></i>
+        </button>
+        <button
+          type="button"
+          class="rounded-full p-1 text-gray-400 hover:text-white"
+        >
+          <i class="fa-solid fa-circle-user"></i>
+        </button>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="w-[1240px] mx-auto mt-10 px-10">
+      <!-- Header Section -->
+      <div class="flex-row items-center justify-between pb-5 rounded-[20px]">
+        <h1 class="text-black text-3xl font-normal">Mes congés</h1>
+        <div class="text-black text-base font-normal">
+          Consultez et gérez vos demandes de congés
+        </div>
+      </div>
+
+      <!-- Stats Section -->
+      <div class="flex items-center justify-between my-5">
+        <!-- Stat Card 1 -->
+        <div
+          class="w-70 h-30 bg-[#d3d2d8] rounded-[20px] flex items-center px-8"
+        >
+          <div class="text-4xl text-black mr-4">
+            <i class="fa-solid fa-calendar"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-normal mb-1">
+              Solde restant
+            </div>
+            <div class="text-black text-3xl font-semibold">23</div>
+          </div>
+        </div>
+        <!-- Stat Card 2 -->
+        <div
+          class="w-70 h-30 bg-[#d3d2d8] rounded-[20px] flex items-center px-8"
+        >
+          <div class="text-4xl text-black mr-4">
+            <i class="fa-solid fa-check-circle"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-normal mb-1">Approuvés</div>
+            <div class="text-black text-3xl font-semibold">12</div>
+          </div>
+        </div>
+        <!-- Stat Card 3 -->
+        <div
+          class="w-70 h-30 bg-[#d3d2d8] rounded-[20px] flex items-center px-8"
+        >
+          <div class="text-4xl text-black mr-4">
+            <i class="fa-solid fa-clock"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-normal mb-1">En attente</div>
+            <div class="text-black text-3xl font-semibold">2</div>
+          </div>
+        </div>
+        <!-- Stat Card 4 -->
+        <div
+          class="w-70 h-30 bg-[#d3d2d8] rounded-[20px] flex items-center px-8"
+        >
+          <div class="text-4xl text-black mr-4">
+            <i class="fa-solid fa-xmark-circle"></i>
+          </div>
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-normal mb-1">Refusés</div>
+            <div class="text-black text-3xl font-semibold">1</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Leave Requests List -->
+      <div class="bg-[#d3d2d8] rounded-[20px] p-8 mt-10">
+        <h2 class="text-black text-xl font-semibold mb-4">
+          Historique des demandes
+        </h2>
+        <!-- Leave Request 1 -->
+        <div class="bg-white rounded-xl p-6 mb-4 flex items-center justify-between">
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-semibold mb-2">Congés d'été</div>
+            <div class="text-gray-600 text-sm">Du 15 juillet 2025</div>
+            <div class="text-gray-600 text-sm">Au 29 juillet 2025</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Durée</div>
+            <div class="text-black font-semibold">15 jours</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Type</div>
+            <div class="text-black font-semibold">Congés payés</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Status</div>
+            <div class="text-yellow-600 font-semibold flex items-center justify-center">
+              <i class="fa-solid fa-clock mr-2"></i>En attente
+            </div>
+          </div>
+          <div class="flex space-x-2">
+            <button class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded-full text-sm">
+              <i class="fa-solid fa-pen-to-square mr-1"></i> Modifier
+            </button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full text-sm">
+              <i class="fa-solid fa-xmark mr-1"></i> Annuler
+            </button>
+          </div>
+        </div>
+        <!-- Leave Request 2 -->
+        <div class="bg-white rounded-xl p-6 mb-4 flex items-center justify-between">
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-semibold mb-2">Pont de mai</div>
+            <div class="text-gray-600 text-sm">Du 1er mai 2025</div>
+            <div class="text-gray-600 text-sm">Au 2 mai 2025</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Durée</div>
+            <div class="text-black font-semibold">1 jour</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Type</div>
+            <div class="text-black font-semibold">Congés payés</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Status</div>
+            <div class="text-green-600 font-semibold flex items-center justify-center">
+              <i class="fa-solid fa-check-circle mr-2"></i>Approuvé
+            </div>
+          </div>
+          <div class="flex-1 text-right text-gray-500 text-sm">Approuvé par Jean Martin</div>
+        </div>
+        <!-- Leave Request 3 -->
+        <div class="bg-white rounded-xl p-6 mb-4 flex items-center justify-between">
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-semibold mb-2">Congés de Pâques</div>
+            <div class="text-gray-600 text-sm">Du 14 avril 2025</div>
+            <div class="text-gray-600 text-sm">Au 18 avril 2025</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Durée</div>
+            <div class="text-black font-semibold">5 jours</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Type</div>
+            <div class="text-black font-semibold">Congés payés</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Status</div>
+            <div class="text-green-600 font-semibold flex items-center justify-center">
+              <i class="fa-solid fa-check-circle mr-2"></i>Approuvé
+            </div>
+          </div>
+          <div class="flex-1 text-right text-gray-500 text-sm">Approuvé par Jean Martin</div>
+        </div>
+        <!-- Leave Request 4 -->
+        <div class="bg-white rounded-xl p-6 mb-4 flex items-center justify-between">
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-semibold mb-2">Formation urgente</div>
+            <div class="text-gray-600 text-sm">Du 10 mars 2025</div>
+            <div class="text-gray-600 text-sm">Au 12 mars 2025</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Durée</div>
+            <div class="text-black font-semibold">3 jours</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Type</div>
+            <div class="text-black font-semibold">Formation</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Status</div>
+            <div class="text-yellow-600 font-semibold flex items-center justify-center">
+              <i class="fa-solid fa-clock mr-2"></i>En attente
+            </div>
+          </div>
+          <div class="flex space-x-2">
+            <button class="bg-gray-200 hover:bg-gray-300 text-black py-2 px-4 rounded-full text-sm">
+              <i class="fa-solid fa-pen-to-square mr-1"></i> Modifier
+            </button>
+            <button class="bg-red-500 hover:bg-red-600 text-white py-2 px-4 rounded-full text-sm">
+              <i class="fa-solid fa-xmark mr-1"></i> Annuler
+            </button>
+          </div>
+        </div>
+        <!-- Leave Request 5 -->
+        <div class="bg-white rounded-xl p-6 flex items-center justify-between">
+          <div class="flex flex-col">
+            <div class="text-black text-lg font-semibold mb-2">Congés de Noël</div>
+            <div class="text-gray-600 text-sm">Du 23 décembre 2024</div>
+            <div class="text-gray-600 text-sm">Au 2 janvier 2025</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Durée</div>
+            <div class="text-black font-semibold">11 jours</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Type</div>
+            <div class="text-black font-semibold">Congés payés</div>
+          </div>
+          <div class="flex-1 text-center">
+            <div class="text-gray-600 text-sm">Status</div>
+            <div class="text-red-600 font-semibold flex items-center justify-center">
+              <i class="fa-solid fa-xmark-circle mr-2"></i>Refusé
+            </div>
+          </div>
+          <div class="flex-1 flex-col">
+            <div class="text-right text-gray-500 text-sm">Refusé par Jean Martin</div>
+            <div class="text-right text-gray-500 text-sm mt-1">Motif du refus: Période de forte activité, demande trop tardive</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <footer
+      class="w-full items-center justify-between flex bg-slate-700 mx-auto py-20 mt-20 px-50"
+    >
+      <!-- logo -->
+      <div class="flex-grow">
+        <span class="text-teal-600 text-3xl font-bold">F</span
+        ><span class="text-gray-200 text-3xl font-normal">lexi</span
+        ><span class="text-teal-600 text-3xl font-bold">D</span
+        ><span class="text-gray-200 text-3xl font-normal">ays</span>
+      </div>
+      <!-- @ -->
+      <div class="text-white flex-grow text-center">
+        @Lorem, ipsum dolor 2025 .
+      </div>
+      <!-- menu -->
+      <div class="flex-row items-c justify-between pl-40 space-x-4 flex-grow text-right">
+        <div>
+          <a
+            href="index.html"
+            class="px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Dashboard</a
+          >
+        </div>
+        <div>
+          <a
+            href="#"
+            aria-current="page"
+            class="rounded-md px-3 py-2 text-sm font-bold text-teal-600"
+            >Mes congés</a
+          >
+        </div>
+        <div>
+          <a
+            href="Demande_de_conge.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Demande de congé</a
+          >
+        </div>
+        <div>
+          <a
+            href="Administration.html"
+            class="rounded-md px-3 py-2 text-sm font-medium text-gray-200 hover:bg-white/5 hover:text-white"
+            >Administration</a
+          >
+        </div>
+      </div>
+    </footer>
+    <script src="js/api.js"></script>
+    <script src="js/mes-conges.js"></script>
+  </body>
+</html>
